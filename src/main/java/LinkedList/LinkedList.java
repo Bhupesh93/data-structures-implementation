@@ -37,7 +37,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
                 System.out.println("element found "+data);
                 return true;
             }
-
         }
         return false;
     }
@@ -46,6 +45,7 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
         if (this.head == null) {
             head = new Node<T>(data);
             this.size = 1;
+            return true;
         }
         Node<T> iterator = this.head;
         for (; iterator.getNext() != null; iterator = iterator.getNext()) ;
