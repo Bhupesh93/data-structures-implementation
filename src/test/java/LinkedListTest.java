@@ -57,4 +57,22 @@ public class LinkedListTest {
         integerList.add(1);
         Assert.assertEquals("should not be empty",false,integerList.isEmtpy());
     }
+
+    @Test
+    public void testGetMiddle(){
+        LinkedList<Integer> integerLinkedList = new LinkedList<Integer>();
+        Assert.assertEquals("Should be null",null,integerLinkedList.getMiddle());
+        integerLinkedList.add(1);
+        Assert.assertEquals("Should be 1",Integer.valueOf(1),integerLinkedList.getMiddle());
+        integerLinkedList.add(2);
+        integerLinkedList.add(3);
+        Assert.assertEquals("Length odd  - Should be 2",Integer.valueOf(2),integerLinkedList.getMiddle());
+        integerLinkedList.add(4);
+        Assert.assertEquals("Length odd  - Should be 3",Integer.valueOf(3),integerLinkedList.getMiddle());
+        integerLinkedList.add(5);
+        integerLinkedList.add(6);
+        Assert.assertEquals("Length odd  - Should be 4",Integer.valueOf(4),integerLinkedList.getMiddle());
+
+
+    }
 }

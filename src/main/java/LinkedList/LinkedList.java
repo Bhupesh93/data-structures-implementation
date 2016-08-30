@@ -72,6 +72,25 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
         return data;
     }
 
+
+    public T getMiddle(){
+        Node<T> fastPointer = this.head;
+        Node<T> slowPointer = fastPointer;
+
+        while(fastPointer!=null){
+            if(fastPointer.getNext() !=null) {
+                fastPointer = fastPointer.getNext().getNext();
+                slowPointer =slowPointer.getNext();
+            }else
+                fastPointer = null;
+
+        }
+        if(slowPointer != null)
+            return slowPointer.getData();
+
+        return null;
+    }
+
     public void display() {
         Node<T> iterator = this.head;
         System.out.println("The element in the lists are ... ");
