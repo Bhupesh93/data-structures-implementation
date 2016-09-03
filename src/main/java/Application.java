@@ -1,3 +1,4 @@
+import BinarySearchTree.BSTree;
 import LinkedList.LinkedList;
 
 /**
@@ -5,7 +6,17 @@ import LinkedList.LinkedList;
  */
 public class Application {
     public static void main(String[] arg){
-        LinkedList<Integer> nameList = new LinkedList<Integer>(1);
+        BSTree<Integer> BSTree = new BSTree<Integer>();
+        BSTree.display();
+        BSTree.insert(6);
+        BSTree.display();
+        BSTree.insert(3);
+        BSTree.insert(4);
+        BSTree.insert(2);
+        BSTree.display();
+        System.out.println(" number of nodes "+BSTree.countNoOfNodes());
+
+        /*LinkedList<Integer> nameList = new LinkedList<Integer>(1);
         nameList.display();
         System.out.println("Number of elements in the list "+nameList.size());
         nameList.add(2);
@@ -28,6 +39,6 @@ public class Application {
         System.out.println(nameList.remove());
         System.out.println("Number of elements in the list "+nameList.size());
         System.out.println("Is Empty "+nameList.isEmtpy());
-
+*/
     }
 }
