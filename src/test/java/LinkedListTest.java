@@ -1,5 +1,4 @@
-import LinkedList.LinkedList;
-import static org.junit.Assert.*;
+import com.hpe.linkedList.LinkedList;
 
 import org.junit.Assert;
 import org.junit.Test;

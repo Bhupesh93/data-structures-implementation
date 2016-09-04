@@ -1,5 +1,4 @@
-import BinarySearchTree.BSTree;
-import LinkedList.LinkedList;
+import com.hpe.tree.BSTree;
 
 /**
  * Created by Boobesh S on 8/27/2016.

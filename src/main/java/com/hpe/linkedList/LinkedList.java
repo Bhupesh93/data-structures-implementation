@@ -1,11 +1,11 @@
-package LinkedList;
+package com.hpe.linkedList;
 
 import java.util.NoSuchElementException;
 
 /**
  * Created by Boobesh S on 8/27/2016.
  */
-public class LinkedList<T extends Comparable<T>> implements List<T> {
+public class LinkedList<T extends Comparable<T>>  {
 
     private Node<T> head;
     private int size;

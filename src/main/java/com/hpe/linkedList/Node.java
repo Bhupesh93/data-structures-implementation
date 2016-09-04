@@ -1,4 +1,4 @@
-package LinkedList;
+package com.hpe.linkedList;
 
 /**
  * Created by Boobesh S on 8/27/2016.

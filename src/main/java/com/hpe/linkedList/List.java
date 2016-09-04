@@ -1,4 +1,4 @@
-package LinkedList;
+package com.hpe.linkedList;
 
 import java.util.Collection;
 

@@ -1,5 +1,5 @@
-import BinarySearchTree.BSTree;
-import BinarySearchTree.Node;
+import com.hpe.tree.BSTree;
+import com.hpe.tree.Node;
 import org.junit.Assert;
 import org.junit.Test;
 

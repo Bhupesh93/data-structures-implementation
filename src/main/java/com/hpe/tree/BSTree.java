@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package com.hpe.tree;
 
 /**
  * Created by Boobesh S on 9/3/2016.
