@@ -33,7 +33,7 @@ public class Node<T extends Comparable<T>> implements Comparable<T> {
 
     private Node right;
 
-    public Node(T data){
+    public Node(T data) {
         this.data = data;
         this.left = null;
         this.right = null;

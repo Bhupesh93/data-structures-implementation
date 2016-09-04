@@ -1,11 +1,9 @@
 package LinkedList;
 
-import java.util.*;
-
 /**
  * Created by Boobesh S on 8/27/2016.
  */
-class Node<T extends Comparable<T>> implements  Comparable<T> {
+class Node<T extends Comparable<T>> implements Comparable<T> {
     private T data;
     private Node next;
 
@@ -13,6 +11,7 @@ class Node<T extends Comparable<T>> implements  Comparable<T> {
         this.data = data;
         this.next = null;
     }
+
     public Node(T data, Node next) {
         this.data = data;
         this.next = next;
