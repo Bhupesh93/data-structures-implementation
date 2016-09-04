@@ -8,7 +8,7 @@ import com.hpe.exception.StackEmtpyException;
  */
 public class Stack<T> {
     private int size;
-    private Object elements[];
+    private Object elements[]; //stack implementation can be different like in queue
     final static int DEFAULT_SIZE = 10;
 
     public Stack() {
