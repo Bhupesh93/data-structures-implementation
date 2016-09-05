@@ -35,6 +35,10 @@ public class Queue<T> {
         return data;
     }
 
+    public boolean isEmpty(){
+        return first == null;
+    }
+
 
     private class Node<T> {
         private T data;
