@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 /**
  * Created by Boobesh S on 8/27/2016.
  */
-public class LinkedList<T extends Comparable<T>>  {
+public class LinkedList<T extends Comparable<T>> {
 
     private Node<T> head;
     private int size;
@@ -32,9 +32,8 @@ public class LinkedList<T extends Comparable<T>>  {
         Node<T> iterator = this.head;
         System.out.println("The element in the lists are ... ");
         for (; iterator != null; iterator = iterator.getNext()) {
-            if(iterator.compareTo(data) == 0)
-            {
-                System.out.println("element found "+data);
+            if (iterator.compareTo(data) == 0) {
+                System.out.println("element found " + data);
                 return true;
             }
         }
@@ -65,7 +64,7 @@ public class LinkedList<T extends Comparable<T>>  {
         }
         Node<T> iterator = this.head.getNext();
         Node<T> previous = this.head;
-        for (; iterator.getNext() != null; previous = iterator, iterator = iterator.getNext());
+        for (; iterator.getNext() != null; previous = iterator, iterator = iterator.getNext()) ;
         T data = iterator.getData();
         previous.setNext(null);
         this.size--;
@@ -73,19 +72,19 @@ public class LinkedList<T extends Comparable<T>>  {
     }
 
 
-    public T getMiddle(){
+    public T getMiddle() {
         Node<T> fastPointer = this.head;
         Node<T> slowPointer = fastPointer;
 
-        while(fastPointer!=null){
-            if(fastPointer.getNext() !=null) {
+        while (fastPointer != null) {
+            if (fastPointer.getNext() != null) {
                 fastPointer = fastPointer.getNext().getNext();
-                slowPointer =slowPointer.getNext();
-            }else
+                slowPointer = slowPointer.getNext();
+            } else
                 fastPointer = null;
 
         }
-        if(slowPointer != null)
+        if (slowPointer != null)
             return slowPointer.getData();
 
         return null;
@@ -97,5 +96,18 @@ public class LinkedList<T extends Comparable<T>>  {
         for (; iterator != null; iterator = iterator.getNext()) {
             System.out.println(iterator.getData());
         }
+    }
+
+    public void reverse() {
+        Node<T> current = this.head;
+        Node<T> previous = null;
+        Node<T> nextNode = null;
+        while (current != null) {
+            nextNode = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = nextNode;
+        }
+        head = previous;
     }
 }
